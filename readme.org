@@ -1,0 +1,11 @@
+* Webotron
+
+#+BEGIN_QUOTE
+Webotron is a script that sync a local directory to an s3 bucket, and optionally configure Route 53 and Cloudfront.
+#+END_QUOTE
+
+
+
+
+
+
