@@ -14,6 +14,9 @@ click = "*"
 [dev-packages]
 
 ipython = "*"
+pycodestyle = "*"
+pydocstyle = "*"
+pylint = "*"
 
 
 [requires]
