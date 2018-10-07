@@ -18,9 +18,9 @@ import click
 
 from bucket import BucketManager
 
-
 SESSION = None
 BUCKET_MANAGER = None
+
 
 @click.option("--profile", default=None,
               help="Use a given AWS profile.")
@@ -28,7 +28,7 @@ BUCKET_MANAGER = None
 def cli(profile):
     """Webotron deploys websites to AWS."""
     global SESSION, BUCKET_MANAGER
-    
+
     session_cfg = {}
     if profile:
         session_cfg['profile_name'] = profile
@@ -67,6 +67,11 @@ def setup_bucket(bucket):
 def sync(pathname, bucket):
     """Sync contents of PATHNAME to BUCKET."""
     BUCKET_MANAGER.sync(pathname, bucket)
+    print(
+        BUCKET_MANAGER.get_bucket_url(
+            BUCKET_MANAGER.s3.Bucket(bucket)
+        )
+    )
 
 
 if __name__ == "__main__":
