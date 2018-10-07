@@ -15,5 +15,29 @@ Webotron currently has the following features:
 - Sync a local directory with a bucket
 - Set AWS profile with --profile=<profileName>
 
+** Usage
 
+#+BEGIN_SRC sh
+Usage: webotron.py [OPTIONS] COMMAND [ARGS]...
+
+  Webotron deploys websites to AWS.
+
+Options:
+  --profile TEXT  Use a given AWS profile.
+  --help          Show this message and exit.
+
+Commands:
+  list-bucket-objects  List objects in a s3 bucket.
+  list-buckets         List all s3 buckets.
+  setup-bucket         Create and configure s3 bucket.
+  sync                 Sync contents of PATHNAME to BUCKET.
+#+END_SRC
+
+*** Examples
+
+- List all my S3 buckets with profile admin:
+
+#+BEGIN_SRC sh
+python webotron.py --profile=admin list-buckets
+#+END_SRC
 
