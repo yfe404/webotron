@@ -13,7 +13,7 @@ Webotron currently has the following features:
 - List contents of a bucket 
 - Create and setup bucket
 - Sync a local directory with a bucket
-
+- Set AWS profile with --profile=<profileName>
 
 
 
