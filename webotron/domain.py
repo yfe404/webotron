@@ -2,7 +2,7 @@
 
 """Classes for Route 53 domains."""
 import uuid
-import util
+from webotron import util
 
 
 class DomainManager:

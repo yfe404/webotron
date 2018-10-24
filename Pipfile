@@ -17,6 +17,7 @@ ipython = "*"
 pycodestyle = "*"
 pydocstyle = "*"
 pylint = "*"
+setuptools = "*"
 
 
 [requires]
