@@ -14,7 +14,7 @@ REGION_TO_ENDPOINT = {
     "us-east-1": Endpoint(
         "US East (N. Virginia)",
         "s3-website-us-east-1.amazonaws.com",
-        "Z3AQBSTGFYJSTF"
+        "Z3AQSTGFYJSTF"
     ),
 
     "us-west-1": Endpoint(
@@ -74,7 +74,7 @@ REGION_TO_ENDPOINT = {
     "cn-northwest-1": Endpoint(
         "China (Ningxia)",
         "s3-website.cn-northwest-1.amazonaws.com.cn",
-        "Not supported"
+        None
     ),
 
     "eu-central-1": Endpoint(
