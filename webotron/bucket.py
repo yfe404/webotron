@@ -8,6 +8,7 @@ from hashlib import md5
 from functools import reduce
 import mimetypes
 
+import boto3
 from botocore.exceptions import ClientError
 
 from webotron import util
@@ -22,7 +23,7 @@ class BucketManager():
         """Create a BucketManager object."""
         self.session = session
         self.s3 = self.session.resource('s3')
-        self.transfer_config = self.s3.transfer.TransferConfig(
+        self.transfer_config = boto3.s3.transfer.TransferConfig(
             multipart_threshold=self.CHUNK_SIZE,
             multipart_chunksize=self.CHUNK_SIZE
         )
